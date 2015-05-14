@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    <record id="diagnostico_view_tree" model="ir.ui.view">
+            <field name="name">diagnostico.view.tree</field>
+            <field name="model">diagnostico</field>
+            <field name="arch" type="xml">
+	            <tree string="Diagnostico">
+	            	<field name="name"/>
+		            <field name="paciente_id"/>
+		            <field name="fecha"/>
+		            <field name="alumno_id"/>
+		            <field name="maestro_id"/>
+		            <field name="estatus"/>
+		            
+	            </tree>
+            </field>
+        </record> 
+    
+		<record id="diagnostico_view_form" model="ir.ui.view">
+            <field name="name">diagnostico.view.form</field>
+            <field name="model">diagnostico</field>
+            <field name="arch" type="xml">
+	            <form string="Catalogo de diagnostico">
+	            	<field name="name"/>
+		            <field name="paciente_id"/>
+		            <field name="fecha"/>
+		            <field name="alumno_id"/>
+		            <field name="maestro_id"/>
+		            <field name="estatus"/>
+	            </form>
+            </field>
+        </record> 
+    </data>
+</openerp>
