@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    <record id="alumnos_view_tree" model="ir.ui.view">
+            <field name="name">alumnos.view.tree</field>
+            <field name="model">alumnos</field>
+            <field name="arch" type="xml">
+	            <tree string="Alumnos">
+	            	<field name="matricula"/>
+	            	<field name="nombre"/>
+	            	<field name="grupo"/>
+	            	<field name="ciclo"/>
+	            </tree>
+            </field>
+        </record> 
+    
+		<record id="alumnos_view_form" model="ir.ui.view">
+            <field name="name">alumnos.view.form</field>
+            <field name="model">alumnos</field>
+            <field name="arch" type="xml">
+	            <form string="Alumnos">
+	            	<field name="matricula"/>
+	            	<field name="nombre"/>
+	            	<field name="grupo"/>
+	            	<field name="ciclo"/>
+	            </form>
+            </field>
+        </record>  
+    </data>
+</openerp>

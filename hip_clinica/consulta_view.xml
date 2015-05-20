@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    <record id="consulta_view_tree" model="ir.ui.view">
+            <field name="name">consulta.view.tree</field>
+            <field name="model">consulta</field>
+            <field name="arch" type="xml">
+	            <tree string="Consulta">
+	            	<field name="folio"/>
+	            	<field name="fecha"/>
+	            </tree>
+            </field>
+        </record> 
+    
+		<record id="consulta_view_form" model="ir.ui.view">
+            <field name="name">consulta.view.form</field>
+            <field name="model">consulta</field>
+            <field name="arch" type="xml">
+	            <form string="Consulta">
+	            	<field name="folio"/>
+	            	<field name="fecha"/>
+	            </form>
+            </field>
+        </record>  
+    </data>
+</openerp>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<record id="action_pago" model="ir.actions.act_window">
+				<field name="name">Pago</field> 
+				<field name="res_model">pago</field>	 
+				<field name="type">ir.actions.act_window</field> 
+				<field name="view_type">form</field>  
+				<field name="view_mode">tree,form</field>
+				<field name="view_id" ref="pago_view_tree" /> 
+				<field name="context">{}</field>
+				<field name="target">current</field>
+					
+		</record>
+
+		<menuitem id="menu_pago"
+					parent="base.menu_sales"	
+					sequence="1"		
+					action="action_pago"
+		/>
+  </data>
+</openerp>

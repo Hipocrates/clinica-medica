@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<record id="action_receta" model="ir.actions.act_window">
+				<field name="name">Receta</field> 
+				<field name="res_model">receta</field>	 
+				<field name="type">ir.actions.act_window</field> 
+				<field name="view_type">form</field>  
+				<field name="view_mode">tree,form</field>
+				<field name="view_id" ref="receta_view_tree" /> 
+				<field name="context">{}</field>
+				<field name="target">current</field>
+					
+		</record>
+
+		<menuitem id="menu_receta"
+					parent="base.menu_sales"	
+					sequence="1"		
+					action="action_receta"
+		/>
+  </data>
+</openerp>

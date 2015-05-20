@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    <record id="plan_tratamiento_detalle_view_tree" model="ir.ui.view">
+            <field name="name">plan.tratamiento.detalle.view.tree</field>
+            <field name="model">plan.tratamiento.detalle</field>
+            <field name="arch" type="xml">
+	            <tree string="Plan tratamiento detalle">
+	            	<field name="id_cat_tratamiento"/>
+	            	<field name="orden"/>
+	            </tree>
+            </field>
+        </record> 
+    
+		<record id="plan_tratamiento_detalle_view_form" model="ir.ui.view">
+            <field name="name">plan.tratamiento.detalle.view.form</field>
+            <field name="model">plan.tratamiento.detalle</field>
+            <field name="arch" type="xml">
+	            <form string="Plan tratamiento detalle">
+	            	<field name="id_cat_tratamiento"/>
+	            	<field name="orden"/>
+	            </form>
+            </field>
+        </record> 
+    </data>
+</openerp>
