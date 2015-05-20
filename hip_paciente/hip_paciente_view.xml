@@ -55,83 +55,85 @@
             			<field name="antecedentes_patologicos_hereditarios"/>
             			<field name="antecedentes_personales_patologicos"/>
             		</group>
-            		<separator string="Antecedentes personales no patologicos"></separator>
-            		<group>
-            			<group>
-            				<field name="grupo_sanguineo"/>
-            				<field name="factor_rh"/>
-            				<field name="cartilla_de_vacunacion"/>
-            				<field name="esquema_completo"/>
-            				<field name="dosis_faltante"/>
-            				<field name="adicciones"/>
-            			</group>
-            			<group>
-            				<field name="alergias"/>
-            				<field name="especificaciones"/>
-            				<field name="hospitalizado"/>
-            				<field name="fecha_ultima_hospitalizacion"/>
-            				<field name="motivo_ultima_hospitalizacion"/>
-            				<field name="padecimiento_actual"/>
-            			</group>		
-            		</group>
-            		
-            		<group>
-	            		<group>
-		            		<separator string="Aparatos y sistemas" colspan="2"/>
-		            		<field name="sistema_digestivo"/>
-		            		<field name="sistema_respiratorio"/>
-		            		<field name="sistema_cardiovascular"/>
-		            		<field name="aparato_genitourinario"/>
-		            		<field name="sistema_endocrino"/>
-		            		<field name="sistema_hematopoyetico"/>
-	            		</group>
-	            		<group>
-	            			<separator string="Signos vitales" colspan="2"></separator>
-	            			<field name="frecuencia_cardiaca"/>
-	            			<field name="frecuencia_respiratorio"/>
-	            			<field name="tension_arterial"/>
-	            			<field name="temperatura"/>
-	            		</group>
-            		
-            		</group>
-            		<group>
-	            		<group>
-		            		<separator string="Exploración del sistema Estomatognatico" colspan="2"/>
-		            		<field name="articulacion_mandibular"/>
-		            		<field name="ruidos"/>
-		            		<field name="lateralidad"/>
-		            		<field name="apertura"/>
-		            		<field name="chasquidos"/>
-		            		<field name="tejidos_blandos"/>
-	            			
-	            		</group>
-	            		<group>
-	            			<field name="frecuencia_cardiaca"/>
-	            			<field name="frecuencia_respiratorio"/>
-	            			<field name="tension_arterial"/>
-	            			<field name="temperatura"/>
-	            		</group>
-            		</group>
-            		<group>
-	            		<group>
-	            		<separator string="Parodonto" colspan="2"></separator>
-		            		<field name="gingivitis"/>
-		            		<field name="recesion_gingival"/>
-		            		<field name="bolsas_periodontales"/>
-		            		<field name="movilidad_dentaria"/>
-		            		<field name="indice_pdb"/>
-		            		<field name="interpretacion_radiografica"/>
-	            			
-	            		</group>
-	            		<group>
-	            			<field name="diagnostico"/>
-	            			<field name="alumno"/>
-	            			<field name="grupo"/>
-	            		</group>
-            		</group>
-            		</xpath>
-            	
-
+            		<notebook colspan="4">
+            			<page string="Antecedentes personales no patologicos">
+            					<group>
+            						<group>
+			            				<field name="grupo_sanguineo"/>
+			            				<field name="factor_rh"/>
+			            				<field name="cartilla_de_vacunacion"/>
+			            				<field name="esquema_completo"/>
+			            				<field name="dosis_faltante"/>
+			            				<field name="adicciones"/>
+			            			</group>
+			            			<group>
+			            				<field name="alergias"/>
+			            				<field name="especificaciones"/>
+			            				<field name="hospitalizado"/>
+			            				<field name="fecha_ultima_hospitalizacion"/>
+			            				<field name="motivo_ultima_hospitalizacion"/>
+			            				<field name="padecimiento_actual"/>
+			            			</group>		
+			            		</group>
+			            		</page>
+			            <page string="Aparatos y sistemas">
+			            		<group>
+				            		<group>
+					            		<separator string="Aparatos, sistemas y signos vitales" colspan="2"/>
+					            		<field name="sistema_digestivo"/>
+					            		<field name="sistema_respiratorio"/>
+					            		<field name="sistema_cardiovascular"/>
+					            		<field name="aparato_genitourinario"/>
+					            		<field name="sistema_endocrino"/>
+					            		<field name="sistema_hematopoyetico"/>
+				            		</group>
+				            		<group>
+				            			<separator string="Signos vitales" colspan="2"></separator>
+				            			<field name="frecuencia_cardiaca"/>
+				            			<field name="frecuencia_respiratorio"/>
+				            			<field name="tension_arterial"/>
+				            			<field name="temperatura"/>
+				            		</group>
+		            			</group>
+		            	</page>
+		            	<page string="Exploración del sistema Estomatognatico">
+			            		<group>
+				            		<group>
+					            		<field name="articulacion_mandibular"/>
+					            		<field name="ruidos"/>
+					            		<field name="lateralidad"/>
+					            		<field name="apertura"/>
+					            		<field name="chasquidos"/>
+					            		<field name="tejidos_blandos"/>
+				            			
+				            		</group>
+				            		<group>
+				            			<field name="frecuencia_cardiaca"/>
+				            			<field name="frecuencia_respiratorio"/>
+				            			<field name="tension_arterial"/>
+				            			<field name="temperatura"/>
+				            		</group>
+			            		</group>
+			            </page>
+			            <page string="Parodonto">
+			            		<group>
+				            		<group>
+					            		<field name="gingivitis"/>
+					            		<field name="recesion_gingival"/>
+					            		<field name="bolsas_periodontales"/>
+					            		<field name="movilidad_dentaria"/>
+					            		<field name="indice_pdb"/>
+					            		<field name="interpretacion_radiografica"/>
+				            		</group>
+				            		<group>
+				            			<field name="diagnostico"/>
+				            			<field name="alumno"/>
+				            			<field name="grupo"/>
+				            		</group>
+			            		</group>
+			            </page>
+			        </notebook>
+            	</xpath>
             </field>
         </record> 
     </data>

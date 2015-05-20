@@ -7,7 +7,7 @@ class diagnostico_detalle(osv.osv):
     _columns = {
         "id_dx_detalle" : fields.integer("Clave diagnostico detalle"),
         "id_diagnostico" : fields.many2one("diagnostico", "Diagnostico"),
-        "id_cat_diagnostico" : fields.integer("cat.diagnostico", "Catalogo diagnostico"),
+        "id_cat_diagnostico" : fields.many2one("cat.diagnostico", "Catalogo diagnostico"),
         "prioridad" : fields.char("Prioridad"),
                 
     }

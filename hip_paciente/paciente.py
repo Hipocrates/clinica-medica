@@ -19,8 +19,8 @@ class partner_clinica(osv.osv):
                                             ("casado", "Casado(a)"),
                                             ("viudo", "Viudo(a)"),
                                             ("divorciado", "Divorciado(a)" )], "Estado Civil"),
-                "fecha_ultima_consulta" : fields.date("Fecha de ultima consulta Medica u Odontologica"),
-         "motivo_ultima_consulta" : fields.text("Motivo de ultima consulta Medica u Odontologica"),
+                "fecha_ultima_consulta" : fields.date("Fecha de ultima consulta"),
+         "motivo_ultima_consulta" : fields.text("Motivo de ultima consulta"),
          
          
          "antecedentes_patologicos_hereditarios" : fields.text("Antecedentes Patologicos Hereditarios"),

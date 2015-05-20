@@ -6,10 +6,10 @@ class diagnostico(osv.osv):
     _name = "diagnostico"
     _columns = {
         "name" : fields.char("Clave"),
-        "paciente_id" : fields.many2one("res.partner", "Paciente", domain=[("tipo_persona", "=", "paciente")]),
+        "paciente_id" : fields.many2one("res.partner", "Paciente"),
         "fecha" :  fields.date("Fecha"),
-        "alumno_id" : fields.many2one("res.partner", "Paciente", domain=[("tipo_persona", "=", "alumno")]),
-        "maestro_id" : fields.many2one("res.partner", "Paciente", domain=[("tipo_persona", "=", "maestro")]),
+        "alumno_id" : fields.many2one("alumnos", "Alumnos"),
+        "maestro_id" : fields.many2one("maestro", "Maestro"),
         "estatus" : fields.selection([("open", "Abierto"), 
                                       ("close", "Cerrado")], "Estatus")
                 
