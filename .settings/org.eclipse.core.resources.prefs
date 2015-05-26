@@ -1,2 +1,7 @@
 eclipse.preferences.version=1
-encoding//hip_paciente/paciente.py=utf-8
+encoding//hip_clinica/__init__.py=utf-8
+encoding//hip_clinica/__openerp__.py=utf-8
+encoding//hip_clinica/hip_maestro.py=utf-8
+encoding//hip_clinica/hip_plan_tratamiento.py=utf-8
+encoding//hip_clinica/hip_plan_tratamiento_detalle.py=utf-8
+encoding//hip_paciente/__openerp__.py=utf-8

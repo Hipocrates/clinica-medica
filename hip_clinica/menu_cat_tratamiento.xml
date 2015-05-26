@@ -14,7 +14,7 @@
 		</record>
 
 		<menuitem id="menu_cat_tratamiento"
-					parent="base.menu_sales"	
+					parent="menu_clinica_config"	
 					sequence="1"		
 					action="action_cat_tratamiento"
 		/>

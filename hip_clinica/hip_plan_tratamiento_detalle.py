@@ -5,10 +5,11 @@ class plan_tratamiento_detalle(osv.osv):
     
     _name = "plan.tratamiento.detalle"
     _columns = {
-        "id_plan_tx_detalle" : fields.integer("id plan tx detalle"),
-        "id_plan_tx" : fields.many2one("plan.tratamiento", "Plan tratamiento"),
+        #"id_plan_tx_detalle" : fields.integer("id plan tx detalle"),
+        #"id_plan_tx" : fields.integer("id plan tx"),
         "id_cat_tratamiento" : fields.many2one("cat.tratamiento", "Catalogo de tratamiento"),
         "orden" : fields.char("Orden"),
+        "tratamiendo_id" : fields.many2one("plan.tratamiento", "Tratamiento")
                 
     }
 plan_tratamiento_detalle()

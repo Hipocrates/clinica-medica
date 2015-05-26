@@ -11,7 +11,8 @@ class diagnostico(osv.osv):
         "alumno_id" : fields.many2one("alumnos", "Alumnos"),
         "maestro_id" : fields.many2one("maestro", "Maestro"),
         "estatus" : fields.selection([("open", "Abierto"), 
-                                      ("close", "Cerrado")], "Estatus")
+                                      ("close", "Cerrado")], "Estatus"),
+        "diagnostico_ids" : fields.one2many("diagnostico.detalle", "id_diagnostico", "Diagnostico a detalle"),
                 
     }
     

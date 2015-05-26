@@ -29,6 +29,13 @@
 		            <field name="alumno_id"/>
 		            <field name="maestro_id"/>
 		            <field name="estatus"/>
+		            <notebook colspan="4">
+		            	<page string="Detalle Diagnosticos">
+		            		<field name="diagnostico_ids" nolabel="1"/>
+		            			
+		            				            		
+		            	</page>
+		            </notebook>
 	            </form>
             </field>
         </record> 

@@ -9,8 +9,11 @@ Pacientes de la Universidad Hipocrates.
 ====================================
 """,
     'website': 'http://uhipocrates.edu.mx',
-    'depends' : ['base'],
-    'data': ["hip_paciente_view.xml"],
+    'depends' : ['hip_clinica'],
+    'data': [
+             "hip_paciente_view.xml",
+             "menu.xml",
+             ],
     'installable': True,    
     'active' : False
 }

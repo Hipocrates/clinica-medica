@@ -19,7 +19,7 @@ class partner_clinica(osv.osv):
                                             ("casado", "Casado(a)"),
                                             ("viudo", "Viudo(a)"),
                                             ("divorciado", "Divorciado(a)" )], "Estado Civil"),
-                "fecha_ultima_consulta" : fields.date("Fecha de ultima consulta"),
+         "fecha_ultima_consulta" : fields.date("Fecha de ultima consulta"),
          "motivo_ultima_consulta" : fields.text("Motivo de ultima consulta"),
          
          
@@ -41,7 +41,7 @@ class partner_clinica(osv.osv):
                                                ("tabaco", "Tabaco"),
                                                ("alcohol", "Alcohol"),
                                                ("drogas", "Drogas")], "Adicciones"),
-                "alergias" : fields.selection([("antiobioticos", "Antibioticos"),
+         "alergias" : fields.selection([("antiobioticos", "Antibioticos"),
                                                ("analgesicos", "Analgesicos"),
                                                ("alimentos", "Alimentos"),
                                                ("otro", "Otro")], "Alergico a: "),

@@ -12,7 +12,7 @@ class alumnos(osv.osv):
         "grupo" : fields.char("Grupo"),
         "ciclo" : fields.char("Ciclo"),
         #"id_carrera" : fields.char("id carrera"),
-        #"id_alumno" : fields.char("id alumno"),
+        "id_alumno" : fields.integer("Clave alumno"),
                 
     }
 alumnos()

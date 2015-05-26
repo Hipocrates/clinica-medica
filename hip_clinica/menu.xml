@@ -1,0 +1,16 @@
+<openerp>
+    <data>		
+
+		<menuitem id="menu_clinica"
+			name="Clinica"/>			
+			
+		<menuitem id="menu_clinica_config"
+			name="Configuracion"
+			parent="menu_clinica"/>
+			
+		<menuitem id="menu_clinica_consulta"
+			name="Consulta"
+			parent="menu_clinica"/>
+			
+  </data>
+</openerp>
