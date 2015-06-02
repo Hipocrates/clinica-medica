@@ -7,6 +7,8 @@ class consulta_factura(osv.osv):
     _columns = {
         "alumno_id" : fields.many2one("alumnos", "Alumno"),
         "maestro_id" : fields.many2one("maestro", "Maestro"),
+        "diagnostico" : fields.one2many("diagnostico", "diagnostico_factura", "Diagnostico"),
+#         "tratamientos" : fields.one2many("plan.tratamiento.detalle", "factura_id", "Tratamiento"),
               
     }
     

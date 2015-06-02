@@ -22,7 +22,30 @@
                         <field name="number" readonly="1" class="oe_inline"/>
                     </h1>
             	</xpath>
+            	<xpath expr="//page[@string='Invoice Lines']" position="before">
+                    <page string="Diagnosticos">
+            			<field name="diagnostico"/>	
+            		</page>
+       			</xpath>
             </field>
-        </record>    
+        </record> 
+           	
+        <record id="io_action_consulta" model="ir.actions.act_window">
+				<field name="name">Consulta</field> 
+				<field name="res_model">account.invoice</field>
+				<field name="view_type">form</field>  
+				<field name="view_mode">tree,form</field>				
+				<field name="view_id" ref="hip_invoice_form_view" />				
+		</record>
+		
+		
+		
+		<menuitem id="io_menu_consulta"
+					parent="menu_clinica_consulta"	
+					sequence="1"
+					action="io_action_consulta"	
+					/>   
+		
+		
     </data>
 </openerp>

@@ -9,7 +9,6 @@
 	            <tree string="Diagnostico detalle">
 	            	<field name="id_cat_diagnostico"/>
 		            <field name="id_dx_detalle"/>
-		            <field name="id_diagnostico"/>
 	            	<field name="prioridad"/>
 	            </tree>
             </field>
@@ -21,8 +20,7 @@
             <field name="arch" type="xml">
 	            <form string="Diagnostico detalle">
 	            	<field name="id_cat_diagnostico"/>
-	            	<field name="id_dx_detalle"/>
-		            <field name="id_diagnostico"/>
+	            	<field name="id_dx_detalle"/>		            
 	            	<field name="prioridad"/>
 	            </form>
             </field>

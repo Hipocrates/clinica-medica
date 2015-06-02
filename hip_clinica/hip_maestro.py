@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from openerp.osv import osv, fields
-from hip_clinica.receta import receta
 
 class maestro(osv.osv):
     

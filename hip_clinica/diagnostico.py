@@ -12,7 +12,10 @@ class diagnostico(osv.osv):
         "maestro_id" : fields.many2one("maestro", "Maestro"),
         "estatus" : fields.selection([("open", "Abierto"), 
                                       ("close", "Cerrado")], "Estatus"),
-        "diagnostico_ids" : fields.one2many("diagnostico.detalle", "id_diagnostico", "Diagnostico a detalle"),
+#         "diagnostico_ids" : fields.one2many("diagnostico.detalle", "id_diagnostico", "Diagnostico a detalle"),
+        "diagnostico_factura" : fields.many2one("account.invoice", "Factura"),
+        "catalogo_dx" : fields.many2one("cat.diagnostico", "Catalogo Diagnosticos"),
+        "tratamiento_ids" : fields.one2many("plan.tratamiento.detalle", "diagnostico_id", "Tratamientos") 
                 
     }
     

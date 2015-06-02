@@ -9,7 +9,11 @@ class plan_tratamiento_detalle(osv.osv):
         #"id_plan_tx" : fields.integer("id plan tx"),
         "id_cat_tratamiento" : fields.many2one("cat.tratamiento", "Catalogo de tratamiento"),
         "orden" : fields.char("Orden"),
-        "tratamiendo_id" : fields.many2one("plan.tratamiento", "Tratamiento")
+        "fecha" : fields.date("Fecha"),
+        "precio" : fields.float("precio", digits=(12,2)),
+#         "tratamiento_id" : fields.many2one("plan.tratamiento", "Tratamiento"),
+        "diagnostico_id" : fields.many2one("diagnostico", "Diagnostico"),
+#         "factura_id" : fields.many2one("account.invoice", "Factura"),
                 
     }
 plan_tratamiento_detalle()

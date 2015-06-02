@@ -13,7 +13,7 @@
 		</record>
 
 		<menuitem id="menu_plan_tratamiento_detalle"
-					parent="base.menu_sales"	
+					parent="menu_clinica_consulta"	
 					sequence="1"		
 					action="action_plan_tratamiento_detalle"
 		/>

@@ -10,9 +10,10 @@
 	            	<field name="name"/>
 		            <field name="paciente_id"/>
 		            <field name="fecha"/>
-		            <field name="alumno_id"/>
-		            <field name="maestro_id"/>
+		            <!-- <field name="alumno_id"/>
+		            <field name="maestro_id"/> -->
 		            <field name="estatus"/>
+		            <!-- <field name="catalogo_dx" -->
 		            
 	            </tree>
             </field>
@@ -22,20 +23,36 @@
             <field name="name">diagnostico.view.form</field>
             <field name="model">diagnostico</field>
             <field name="arch" type="xml">
-	            <form string="Catalogo de diagnostico">
-	            	<field name="name"/>
-		            <field name="paciente_id"/>
-		            <field name="fecha"/>
-		            <field name="alumno_id"/>
-		            <field name="maestro_id"/>
-		            <field name="estatus"/>
-		            <notebook colspan="4">
-		            	<page string="Detalle Diagnosticos">
-		            		<field name="diagnostico_ids" nolabel="1"/>
-		            			
-		            				            		
+	            <form string="Catalogo de diagnostico" version="7.0">
+	            	<header>
+	            		<field name="estatus" widget="statusbar"/>
+	            	</header>
+	            	<sheet>
+	            	<group>
+	            		<group>
+	            			<field name="name" invisible="1"/>
+            				<field name="alumno_id" invisible="1"/>
+	   	            		<field name="catalogo_dx"/>
+	            		</group>
+	            		<group>
+	            			<field name="paciente_id"/> 
+	            			<field name="fecha" invisible="1"/>
+            				<field name="maestro_id" invisible="1"/>
+	            		</group>
+	            	</group>
+	            	<notebook colspan="4">
+		            	<page string="Plan de Tratamiento">
+		            		<field name="tratamiento_ids" nolabel="1">
+		            			<tree string="Tratamientos" editable="bottom">
+		            				<field name="id_cat_tratamiento"/>
+		            				<field name="orden"/>
+		            				<field name="fecha"/>
+		            				<field name="precio"/>
+		            			</tree>
+		            		</field>	            		
 		            	</page>
 		            </notebook>
+		            </sheet>
 	            </form>
             </field>
         </record> 

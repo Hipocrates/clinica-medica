@@ -6,7 +6,7 @@
             <field name="name">plan.tratamiento.view.tree</field>
             <field name="model">plan.tratamiento</field>
             <field name="arch" type="xml">
-	            <tree string="Plan tratamiento">
+	            <tree string="Tratamiento">
 	            	<field name="name"/>
 	            	<field name="id_paciente"/>
 	            	<field name="id_diagnostico"/>
@@ -23,7 +23,7 @@
             <field name="name">plan.tratamiento.view.form</field>
             <field name="model">plan.tratamiento</field>
             <field name="arch" type="xml">
-	            <form string="Plan tratamiento">	            	
+	            <form string="Tratamiento">	            	
 	            	<group>
 	            		<group>
 	            			<field name="name"/>
@@ -52,7 +52,7 @@
         </record> 
         
         <record id="action_plan_tratamiento" model="ir.actions.act_window">
-				<field name="name">Plan tratamiento</field> 
+				<field name="name">Tratamiento</field> 
 				<field name="res_model">plan.tratamiento</field>	 
 				<field name="type">ir.actions.act_window</field> 
 				<field name="view_type">form</field>  
