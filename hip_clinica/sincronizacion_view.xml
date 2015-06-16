@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data> 
+        
+        <record id="sincronizacion_view_form" model="ir.ui.view">
+            <field name="name">sincronizacion.view.form</field>
+            <field name="model">sincronizacion</field>
+            <field name="arch" type="xml">
+	            <form string="Sincronizacion">
+	            <button name="sincronizador" string="Sincronizacion" type="object"/>
+	            <button name="sincromaestro" string="Sincronizacion Maestros" type="object"/>	            
+	            </form>
+            </field>
+        </record>
+    
+		 
+        
+        <record id="action_sincronizacion" model="ir.actions.act_window">
+				<field name="name">Sincronizacion</field> 
+				<field name="res_model">sincronizacion</field>	 
+				<field name="type">ir.actions.act_window</field> 
+				<field name="view_type">form</field>  
+				<field name="view_mode">tree,form</field>
+				<field name="view_id" ref="sincronizacion_view_form" /> 
+				<field name="context">{}</field>
+				<field name="target">current</field>
+					
+		</record>
+
+		<menuitem id="menu_sincronizacion"
+					parent="menu_sincro"	
+					sequence="1"		
+					action="action_sincronizacion"
+		/>
+    </data>
+</openerp>

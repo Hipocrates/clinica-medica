@@ -15,6 +15,7 @@
 		</record>
 
 		<menuitem id="menu_paciente"
+					sequence="1"
 					parent="hip_clinica.menu_clinica_consulta"
 					action="action_paciente"
 		/>  

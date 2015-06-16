@@ -26,6 +26,24 @@
 		            <field name="price"/>
 	            </form>
             </field>
-        </record> 
+        </record>
+        
+        <record id="action_cat_tratamiento" model="ir.actions.act_window">
+				<field name="name">Catalogo de tratamientos</field> 
+				<field name="res_model">cat.tratamiento</field>	 
+				<field name="type">ir.actions.act_window</field> 
+				<field name="view_type">form</field>  
+				<field name="view_mode">tree,form</field>
+				<field name="view_id" ref="cat_tratamiento_view_tree" /> 
+				<field name="context">{}</field>
+				<field name="target">current</field>
+					
+		</record>
+
+		<menuitem id="menu_cat_tratamiento"
+					parent="menu_clinica_config"	
+					sequence="1"		
+					action="action_cat_tratamiento"
+		/> 
     </data>
 </openerp>

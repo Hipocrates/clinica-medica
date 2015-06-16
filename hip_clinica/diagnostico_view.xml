@@ -48,6 +48,8 @@
 		            				<field name="orden"/>
 		            				<field name="fecha"/>
 		            				<field name="precio"/>
+		            				<field name="paciente_id"/>
+		            				<field name="status"/>
 		            			</tree>
 		            		</field>	            		
 		            	</page>
@@ -56,5 +58,23 @@
 	            </form>
             </field>
         </record> 
+        
+        <record id="action_diagnostico" model="ir.actions.act_window">
+				<field name="name">Diagnostico</field> 
+				<field name="res_model">diagnostico</field>	 
+				<field name="type">ir.actions.act_window</field> 
+				<field name="view_type">form</field>  
+				<field name="view_mode">tree,form</field>
+				<field name="view_id" ref="diagnostico_view_tree" /> 
+				<field name="context">{}</field>
+				<field name="target">current</field>
+					
+		</record>
+
+		<menuitem id="menu_diagnostico"
+					parent="menu_clinica_consulta"	
+					sequence="1"		
+					action="action_diagnostico"
+		/>
     </data>
 </openerp>

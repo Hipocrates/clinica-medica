@@ -14,6 +14,8 @@ class plan_tratamiento_detalle(osv.osv):
 #         "tratamiento_id" : fields.many2one("plan.tratamiento", "Tratamiento"),
         "diagnostico_id" : fields.many2one("diagnostico", "Diagnostico"),
 #         "factura_id" : fields.many2one("account.invoice", "Factura"),
-                
+        "paciente_id" : fields.many2one("res.partner", "Paciente"),  
+        "status" : fields.selection([("draft", "Nuevo"), 
+                                           ("done", "Revisado")], "Status"),          
     }
 plan_tratamiento_detalle()

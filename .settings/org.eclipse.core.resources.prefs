@@ -5,6 +5,6 @@ encoding//hip_clinica/cat_diagnostico.py=utf-8
 encoding//hip_clinica/cat_tratamiento.py=utf-8
 encoding//hip_clinica/diagnostico.py=utf-8
 encoding//hip_clinica/hip_maestro.py=utf-8
-encoding//hip_clinica/hip_plan_tratamiento.py=utf-8
 encoding//hip_clinica/hip_plan_tratamiento_detalle.py=utf-8
+encoding//hip_clinica/sincronizacion.py=utf-8
 encoding//hip_paciente/__openerp__.py=utf-8
