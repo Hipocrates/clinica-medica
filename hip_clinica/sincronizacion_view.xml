@@ -13,8 +13,8 @@
             </field>
         </record>
     
-		 
-        
+    
+		
         <record id="action_sincronizacion" model="ir.actions.act_window">
 				<field name="name">Sincronizacion</field> 
 				<field name="res_model">sincronizacion</field>	 

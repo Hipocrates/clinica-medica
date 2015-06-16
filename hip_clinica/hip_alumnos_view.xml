@@ -15,6 +15,20 @@
             </field>
         </record> 
     
+        <record id="view_hip_alumnos_filter" model="ir.ui.view">
+            <field name="name">view.hip.alumnos.filter</field>
+            <field name="model">alumnos</field>
+            <field name="arch" type="xml">
+                <search string="Buscar...">
+                	<filter name="odontologia" string="Odontologia" domain="[('especialidad','=','odontologia')]"/>
+                	<filter name="espendodoncia" string="Especialidad en Endodoncia" domain="[('especialidad','=','espendodoncia')]"/>
+                	<filter name="esportodoncia" string="Especialidad en Ortodoncia" domain="[('especialidad','=','esportodoncia')]"/>
+                	<filter name="esprehabilitacion" string="Especialidad en Rehabilitacion e Implantacion Oral" domain="[('especialidad','=','esprehabilitacion')]"/>
+                </search>
+            </field>
+       	</record>  
+            
+    
 		<record id="alumnos_view_form" model="ir.ui.view">
             <field name="name">alumnos.view.form</field>
             <field name="model">alumnos</field>
@@ -42,8 +56,7 @@
 
 		<menuitem id="menu_clinica_alumnos"
 					parent="menu_clinica_config"
-					action="action_alumnos"
-		/>
+					action="action_alumnos"/>
 		
     </data>
 </openerp>

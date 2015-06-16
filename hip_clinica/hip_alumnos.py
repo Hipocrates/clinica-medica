@@ -13,6 +13,10 @@ class alumnos(osv.osv):
         "ciclo" : fields.char("Ciclo"),
         #"id_carrera" : fields.char("id carrera"),
         "id_alumno" : fields.integer("Clave alumno"),
+        "especialidad" : fields.selection([("odontologia", "Odontologia"),
+                                           ("espendodoncia", "Esp. en Endodoncia"),
+                                           ("esportodoncia", "Esp. en Ortodoncia"),
+                                           ("esprehabilitacion", "Esp. en Rehabilitacion e Implantacion Oral")], "Especialidad")
                 
     }
 alumnos()
