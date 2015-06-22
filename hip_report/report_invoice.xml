@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+
+<template id="report_invoice_document">   
+   	<div class="page page_invoice container-fluid">
+   	<div class="row">
+        		<article id="logo">
+        			<img t-if="o.company_id.hip_header" t-att-src="'data:image/png;base64,%s' % o.company_id.hip_header" width="100%"/>
+        		</article>
+        </div> 
+        <div class="row">
+        	<section id="sec_lateral" style="font-size:1.3em">
+        		<article>
+
+					<center>
+					<h1><p>CONSENTIMIENTO PARA OPERATORIO DENTAL</p></h1>
+					
+					<h2><p align="justify">Que el Doctor me ha explicado que es  conveniente proceder en mi situación, a la OBTURACIÓN (AMALGAMA, RESINA O/Y INCRUSTACIONES) del diente/molar.</p>
+					
+					<p align="justify">1.- El propósito principal de la intervención es restaurar los tejidos dentarios duros y proteger la pulpa, para conservar el diente/molar y su función, restableciendo al tiempo, siempre que sea posible, la estética adecuada.</p>
+					
+					<p align="justify">2.- La intervención requiere anestesia local, de cuyos riesgos también me ha informado.</p>
+					
+					<p align="justify">3.- La intervención consiste en limpiar la cavidad de tejido enfermo y rellenarla posteriormente para conseguir un sellado hermético, conservado el diente/molar.</p>
+					
+					<p align="justify">4.- El facultativo me ha advertido que es frecuente que se produzca una mayor sensibilidad, sobre todo al frio, que normalmente desaparecerá de modo espontaneo. También se me ha recomendado que vuelva a visitarle dentro de 24 horas, si advierto signos de movilidad o alteraciones de la oclusión, pues en ese caso sería preciso ajustar la oclusión, ara aliviar el dolor y para impedir la formación de una enfermedad periodontal y/o trauma.</p>
+					
+					<p align="justify">Comprendo que el sellado hermético puede reactivar procesos infecciosos que hagan necesaria la endodoncia y que, especialmente si la caries es profunda, el diente/molar quedara frágil y podrá ser necesario llevar a cabo otro tipo de reconstrucción o colocar una corona protésica.</p>
+					
+					<p align="justify">También comprendo que es posible que me encuentre insatisfecho con la forma o color del diente tras el tratamiento, porque las cualidades de las restauraciones directas nunca serán idénticas a su aspecto sano.</p>
+					
+					<p align="justify">5.- El odontólogo me ha explicado que todo acto quirúrgico lleva implícitas una serie de complicaciones comunes y potencialmente serias que podrían requerir tratamientos complementarios tanto médicos como quirúrgicos, y que por mi situación actual (diabetes, cardiopatía, hipertensión, anemia, edad avanzada, obesidad) pueden aumentar los riesgos y complicaciones como:</p>
+					
+					<p align="justify">He comprendido las explicaciones que se me han facilitado en el lenguaje claro y sencillo, y el facultativo que me ha atendido me ha permitido realizar todas las observaciones y me ha aclarado todas las dudas que le he planteado.</p>
+					
+					<p align="justify">También comprendo que , en cualquier momento y sin necesidad de dar ninguna explicación, puedo revocar el consentimiento que ahora presto.</p>
+					
+					<p align="justify">Por ello, manifiesto que estoy satisfecho con la información recibida y que comprendo el alcance y los riesgos del tratamiento y en teles condiciones.</p>
+					
+					CONSIENTO, FIRMA Y NOMBRE.
+					______________________________________________________</h2>
+					</center>
+				</article>
+        	</section>	
+        </div>              
+    </div>
+    <div class="row footer" >
+   		<article id="logo">
+   			<img t-if="o.company_id.hip_footer" t-att-src="'data:image/png;base64,%s' % o.company_id.hip_footer" width="100%"/>
+   		</article>
+   	</div>  
+</template>
+
+<template id="report_invoice">
+    <t t-call="report.html_container">
+        <t t-foreach="doc_ids" t-as="doc_id">
+            <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'hip_report.report_invoice_document')"/>
+        </t>
+    </t>
+</template>
+</data>
+</openerp>

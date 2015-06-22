@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+		<record id="hip_invoice_tree_view" model="ir.ui.view">
+			<field name="name">hip.account.invoice.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+            	<field name="partner_id" position="attributes">
+            		<attribute name="string">Paciente</attribute>
+            	</field>
+            </field>
+		</record>
+		
 		<record id="hip_invoice_form_view" model="ir.ui.view">
             <field name="name">hip.account.invoice.form</field>
             <field name="model">account.invoice</field>
@@ -35,11 +46,23 @@
 				<field name="res_model">account.invoice</field>
 				<field name="view_type">form</field>  
 				<field name="view_mode">tree,form</field>				
-				<field name="view_id" ref="hip_invoice_form_view" />				
+				<field name="view_id" ref="hip_invoice_tree_view" />				
 		</record>
 		
 		
-		
+		<record id="io_action_invoice_tree_view1" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="act_window_id" ref="io_action_consulta"/>
+        </record>
+
+        <record id="io_action_invoice_tree_view2" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="hip_invoice_form_view"/>
+            <field name="act_window_id" ref="io_action_consulta"/>
+        </record>
+        
 		<menuitem id="io_menu_consulta"
 					parent="menu_clinica_consulta"	
 					sequence="1"

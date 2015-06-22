@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+
+<template id="report_invoice_evolucion">   
+   	<div class="page page_invoice container-fluid">
+   	<div class="row">
+        		<article id="logo">
+        			<img t-if="o.company_id.hip_header" t-att-src="'data:image/png;base64,%s' % o.company_id.hip_header" width="100%"/>
+        		</article>
+        </div> 
+        <div class="row">
+        	<section id="sec_lateral" style="font-size:1.3em">
+        		<article>
+
+					<center>
+					<h1><p>CONSENTIMIENTO PARA EXTRACCIÓN DENTAL</p></h1>
+					
+					<h2><p align="justify">Estoy conciente que los tratamientos a realizarse son hechos por estudiantes de la Licenciatura en Odontologia de la "Universidad Hipocrates" y supervisados por el instructor clinico a cargo, por lo cual corroboro que los datos antes mencionados son veridicos y seran utilizados solo como historial medico-Odontologico.</p>
+					
+					<p align="justify">Conforme a NOM 168-SSA 1-1998 del expediente clinico en sus numerales 5.14, 6.1 al 7.2 y NOM 013-SSA2-1994 para la prevencion y control de enfermedades bucales en sus numerales 8.3, 8.3.2, 8.3.3, 8.3.4, 8.3.5</p>
+					______________________________________________________
+					Nombre y firma del paciente (Padre o Tutor)
+					Sobre la veracidad de los datos aportados.
+					
+					______________________________________________________
+					Nombre y firma del alumno tratante
+					
+					_____________________________________________________
+					Nombre y firma del C.D Instructor Clinica</h2>
+					</center>
+				</article>
+        	</section>	
+        </div>              
+    </div>
+    <div class="row footer" >
+   		<article id="logo">
+   			<img t-if="o.company_id.hip_footer" t-att-src="'data:image/png;base64,%s' % o.company_id.hip_footer" width="100%"/>
+   		</article>
+   	</div>  
+</template>
+
+<template id="report_evolucion">
+    <t t-call="report.html_container">
+        <t t-foreach="doc_ids" t-as="doc_id">
+            <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'hip_report.report_invoice_evolucion')"/>
+        </t>
+    </t>
+</template>
+</data>
+</openerp>

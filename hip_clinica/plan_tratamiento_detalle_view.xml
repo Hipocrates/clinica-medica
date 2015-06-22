@@ -45,7 +45,7 @@
 
 		<menuitem id="menu_plan_tratamiento_detalle"
 					parent="menu_clinica_consulta"	
-					sequence="1"		
+					sequence="99"		
 					action="action_plan_tratamiento_detalle"
 		/> 
     </data>

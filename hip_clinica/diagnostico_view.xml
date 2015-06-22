@@ -73,7 +73,7 @@
 
 		<menuitem id="menu_diagnostico"
 					parent="menu_clinica_consulta"	
-					sequence="1"		
+					sequence="99"		
 					action="action_diagnostico"
 		/>
     </data>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+
+<template id="report_invoice_extraccion">   
+   	<div class="page page_invoice container-fluid">
+   	<div class="row">
+        		<article id="logo">
+        			<img t-if="o.company_id.hip_header" t-att-src="'data:image/png;base64,%s' % o.company_id.hip_header" width="100%"/>
+        		</article>
+        </div> 
+        <div class="row">
+        	<section id="sec_lateral" style="font-size:1.3em">
+        		<article>
+
+					<center>
+					<h1><p>CONSENTIMIENTO PARA EXTRACCIÓN DENTAL</p></h1>
+					
+					<h2><p align="justify">Que el Doctor me ha explicado que va a proceder a la EXTRACCION DENTAL.</p>
+					
+					<p align="justify">1.- El propósito principal de la intervención es evitar que la evolución derive en un quiste folicular o en desarrollar un ameloblastoma.</p>
+					
+					<p align="justify">2.- La intervención puede precisar de anestesia local, de cuyos riesgos también se me ha informado.</p>
+					
+					<p align="justify">3.- La intervención consiste en la realización de una incisión alrededor del diente o en la mucosa, posteriormente despegamiento y eliminación del hueso si lo hay que cubra al diente, para qu de esta manera podamos, con instrumental apropiado, extraerlo.</p>
+					
+					<p align="justify">4.- Aunque se me han realizado los medios diagnosticos que se han estimado precisos (radiografia), comprendo que es posible que el estoado inflamartorio del diente que se me va a extraer pueda producir un proceso infeccioso, que puede requerir tratramiento con antibióticos y/o antiinflamatorios, del mismo modo que en el curso del procedimiento puede producirse una hemorragia profusa, que exigiría, para cohibirla, la colocación en el alveolo de una gasa seca; También se que en el curso del procedimiento pueden producirse, aunque no es frecuente, la rotura de la corona, laceraciones en la mucosa de la mejilla o en la lengua, inserccion de la raíz en el seno maxilar, fractura del tabique, ni de su correcta realización, sino que son imprevisibles, en cuyo caso el facultativo tomara las medidas precisas y continuara con la extracción.</p>
+					
+					<p align="justify">Se me informa tambie que, aunque no es precuente , puede producirse luxación de la articulación temporomandibular, en cuyo caso debere recibir el tratamiento preciso con un especialista en esa materia y ser revisado para control de este proceso.</p>
+					
+					<p align="justify">Menos graves resultan las complicaciones infecciosas locales, celulitis, trismo, estomatitis, que suelen poder controlarse farmacológicamente, pero que pueden precisar tratamiento quirúrgico posterior.</p>
+					
+					<p align="justify">5.- El odontólogo me ha explicado que todo acto quirúrgico lleva implícitas una serie de complicaciones comunes y potencialmente serias que podrían requerir tratamientos complementarios tanto médicos como quirúrgicos, y que por mi situación actual (diabetes, cardiopatía, hipertensión, anemia, edad avanzada, obesidad) pueden aumentar los riesgos y complicaciones como:</p>
+					
+					<p align="justify">He comprendido las explicaciones que se me han facilitado en el lenguaje claro y sencillo, y el facultativo que me ha atendido me ha permitido realizar todas las observaciones y me ha aclarado todas las dudas que le he planteado.</p>
+					
+					<p align="justify">También comprendo que , en cualquier momento y sin necesidad de dar ninguna explicación, puedo revocar el consentimiento que ahora presto.</p>
+					
+					<p align="justify">Por ello, manifiesto que estoy satisfecho con la información recibida y que comprendo el alcance y los riesgos del tratamiento y en teles condiciones.</p>
+					
+					CONSIENTO, FIRMA Y NOMBRE.
+					______________________________________________________</h2>
+					</center>
+				</article>
+        	</section>	
+        </div>              
+    </div>
+    <div class="row footer" >
+   		<article id="logo">
+   			<img t-if="o.company_id.hip_footer" t-att-src="'data:image/png;base64,%s' % o.company_id.hip_footer" width="100%"/>
+   		</article>
+   	</div>  
+</template>
+
+<template id="report_extraccion">
+    <t t-call="report.html_container">
+        <t t-foreach="doc_ids" t-as="doc_id">
+            <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'hip_report.report_invoice_extraccion')"/>
+        </t>
+    </t>
+</template>
+</data>
+</openerp>
