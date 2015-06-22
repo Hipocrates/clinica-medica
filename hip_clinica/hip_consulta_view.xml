@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<record id="hip_consulta_tree_view" model="ir.ui.view">
+			<field name="name">hip.consulta.tree.view</field>
+            <field name="model">hip.consulta</field>            
+            <field name="arch" type="xml">
+	            <tree string="Consultas">
+	            	<field name="name"/>
+	            	<field name="fecha"/>
+	            	<field name="partner_id"/>
+	            	<field name="alumno_id"/>
+	            	<field name="maestro_id"/>
+	            	<field name="state"/>
+            	</tree>
+            </field>
+		</record>
+		
+		<record id="hip_consulta_form_view" model="ir.ui.view">
+            <field name="name">hip.consulta.form.view</field>
+            <field name="model">hip.consulta</field>            
+            <field name="arch" type="xml">
+            	<form string="Consultas">
+            		<header>
+            			<field name="state" widget="statusbar"/>
+            		</header>
+            		<sheet>
+            			<group>
+            				<group>
+            					<field name="name"/>
+            					<field name="partner_id"/>
+            				</group>
+            				<group>
+            					<field name="fecha"/>
+            					<field name="alumno_id"/>
+            					<field name="maestro_id"/>
+            				</group>
+            			</group>
+            			<notebook>
+            				<page string="Diagnosticos">
+            					<field name="diagnostico_lines" nolabel="1">
+            						<tree>
+            							<field name="catalogo_dx"/>
+            							<field name="name"/>
+            							<field name="fecha"/>
+            							<field name="estatus"/>
+            						</tree>
+            					</field>
+            				</page>
+            			</notebook>
+            		</sheet>
+            	</form>
+        	</field>
+        </record> 
+           	
+        <record id="io_action_consulta_view" model="ir.actions.act_window">
+				<field name="name">Consultas</field> 
+				<field name="res_model">hip.consulta</field>
+				<field name="view_type">form</field>  
+				<field name="view_mode">tree,form</field>				
+				<field name="view_id" ref="hip_consulta_tree_view" />				
+		</record>
+        
+		<menuitem id="io_menu_consultas"
+					parent="menu_clinica_consulta"	
+					sequence="1"
+					action="io_action_consulta_view"	
+					/>   
+		
+		
+    </data>
+</openerp>

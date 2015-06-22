@@ -13,7 +13,7 @@
              "menu.xml",
              "hip_alumnos_view.xml",
              "hip_maestro_view.xml", 
-             
+             "hip_consulta_view.xml",
             "cat_diagnostico_view.xml", 
             "cat_tratamiento_view.xml",  
             "diagnostico_view.xml", 

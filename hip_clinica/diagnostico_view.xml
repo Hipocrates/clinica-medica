@@ -30,13 +30,13 @@
 	            	<sheet>
 	            	<group>
 	            		<group>
-	            			<field name="name" invisible="1"/>
-            				<field name="alumno_id" invisible="1"/>
-	   	            		<field name="catalogo_dx"/>
+	            			<field name="catalogo_dx" on_change="onchange_diagnostico(catalogo_dx)"/>
+	            			<field name="name" />
+            				<field name="paciente_id" invisible="1"/>
 	            		</group>
 	            		<group>
-	            			<field name="paciente_id"/> 
-	            			<field name="fecha" invisible="1"/>
+	            			<field name="fecha" />
+	            			<field name="alumno_id" invisible="1"/>	            			
             				<field name="maestro_id" invisible="1"/>
 	            		</group>
 	            	</group>
@@ -48,8 +48,8 @@
 		            				<field name="orden"/>
 		            				<field name="fecha"/>
 		            				<field name="precio"/>
-		            				<field name="paciente_id"/>
-		            				<field name="status"/>
+		            				<!-- <field name="paciente_id"/> -->
+		            				<!-- <field name="status"/> -->
 		            			</tree>
 		            		</field>	            		
 		            	</page>

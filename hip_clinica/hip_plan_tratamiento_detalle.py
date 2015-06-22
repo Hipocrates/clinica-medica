@@ -18,4 +18,8 @@ class plan_tratamiento_detalle(osv.osv):
         "status" : fields.selection([("draft", "Nuevo"), 
                                            ("done", "Revisado")], "Status"),          
     }
+    
+    _defaults = {
+        "status" : "draft"
+    }
 plan_tratamiento_detalle()
