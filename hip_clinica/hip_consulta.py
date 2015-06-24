@@ -13,6 +13,11 @@ class hip_consulta(osv.osv):
         vals['name'] = self.pool.get('ir.sequence').get(cr, uid, 'hip.consulta') or '/'
         return super(hip_consulta, self).create(cr, uid, vals, context=context)
     
+    def get_company(self, cr, uid, context=None):
+        obj = self.pool.get("res.users")
+        user = obj.browse(cr, 1, [uid])
+        return user.company_id.id
+    
     _columns = {
         "name" : fields.char("Folio", readonly=True, store=True),
         "partner_id" : fields.many2one("res.partner", "Paciente"),
@@ -21,11 +26,13 @@ class hip_consulta(osv.osv):
         "alumno_id" : fields.many2one("alumnos", "Alumno"),
         "diagnostico_lines" : fields.one2many("diagnostico", "consulta_id", "Diagnostico"),
         "state" : fields.selection([("draft", "Borrador"),
-                                    ("done", "Realizada")], "Estatus") 
+                                    ("done", "Realizada")], "Estatus"),
+        "company_id" : fields.many2one("res.company", "Company"),
     }
     
     _defaults = {
-        "state" : "draft"
+        "state" : "draft",
+        "company_id" : get_company
     }
     
 hip_consulta()

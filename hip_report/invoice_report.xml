@@ -4,7 +4,7 @@
         
         <report 
             id="account_invoices2" 
-            model="account.invoice" 
+            model="hip.consulta" 
             string="Consentimiento" 
             report_type="qweb-pdf" 
             name="hip_report.report_invoice" 

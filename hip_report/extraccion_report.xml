@@ -4,7 +4,7 @@
         
         <report 
             id="account_invoices22" 
-            model="account.invoice" 
+            model="hip.consulta" 
             string="C. Extraccón" 
             report_type="qweb-pdf" 
             name="hip_report.report_extraccion" 

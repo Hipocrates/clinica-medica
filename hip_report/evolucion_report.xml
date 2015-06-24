@@ -4,7 +4,7 @@
         
         <report 
             id="account_invoices222" 
-            model="account.invoice" 
+            model="hip.consulta" 
             string="Hoja de Evolucion" 
             report_type="qweb-pdf" 
             name="hip_report.report_evolucion" 
