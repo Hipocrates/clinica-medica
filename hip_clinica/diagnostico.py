@@ -10,8 +10,8 @@ class diagnostico(osv.osv):
         "fecha" :  fields.date("Fecha"),
         "alumno_id" : fields.many2one("alumnos", "Alumnos"),
         "maestro_id" : fields.many2one("maestro", "Maestro"),
-        "estatus" : fields.selection([("open", "Abierto"), 
-                                      ("close", "Cerrado")], "Estatus"),
+        "state" : fields.selection([("draft", "Abierto"), 
+                                      ("done", "Cerrado")], "Estatus"),
 #         "diagnostico_ids" : fields.one2many("diagnostico.detalle", "id_diagnostico", "Diagnostico a detalle"),
         "diagnostico_factura" : fields.many2one("account.invoice", "Factura"),
         "consulta_id" : fields.many2one("hip.consulta", "Consulta"),
@@ -21,8 +21,12 @@ class diagnostico(osv.osv):
     }
     
     _defaults = {
-        "estatus" : "open"
+        "estatus" : "draft"
     }
+    
+    def signal_done(self, cr, uid, ids, context=None):        
+        self.write(cr, uid, ids, {"estatus" : "close"})        
+        return True
     
     def onchange_diagnostico(self, cr, uid, ids, d_id, context=None):
         

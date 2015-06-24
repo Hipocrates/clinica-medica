@@ -12,7 +12,7 @@
 		            <field name="fecha"/>
 		            <!-- <field name="alumno_id"/>
 		            <field name="maestro_id"/> -->
-		            <field name="estatus"/>
+		            <field name="state"/>
 		            <!-- <field name="catalogo_dx" -->
 		            
 	            </tree>
@@ -23,9 +23,10 @@
             <field name="name">diagnostico.view.form</field>
             <field name="model">diagnostico</field>
             <field name="arch" type="xml">
-	            <form string="Catalogo de diagnostico" version="7.0">
+	            <form string="Catalogo de diagnostico">
 	            	<header>
-	            		<field name="estatus" widget="statusbar"/>
+	            		<button name="signal_done" string="Finalizar" type="object" class="oe_highlight" />
+	            		<field name="state" widget="statusbar" states="draft"/>
 	            	</header>
 	            	<sheet>
 	            	<group>
@@ -57,7 +58,19 @@
 		            </sheet>
 	            </form>
             </field>
-        </record> 
+        </record>
+        
+        <record id="view_diagnostico_filter" model="ir.ui.view">
+            <field name="name">view.diagnostico.filter</field>
+            <field name="model">diagnostico</field>
+            <field name="arch" type="xml">
+                <search string="Buscar...">
+               		<group expand="0" string="Agrupar por...">               			
+               			<filter string="Paciente" domain="[]" context="{'group_by':'paciente_id'}"/>
+               		</group>
+                </search>
+            </field>
+       	</record>  
         
         <record id="action_diagnostico" model="ir.actions.act_window">
 				<field name="name">Diagnostico</field> 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Tipo -->
+        <record id="rms_sequence_tipo_hip_consulta" model="ir.sequence.type">
+            <field name="name">Consulta</field>
+            <field name="code">hip.consulta</field>              
+        </record>
+        
+        <!-- Sequence -->
+        <record id="hip_sequence_consulta" model="ir.sequence">
+            <field name="name">Consulta</field>
+            <field name="code">hip.consulta</field>
+            <field name="padding">4</field>  
+                      
+        </record>
+	</data>
+</openerp>

@@ -21,6 +21,7 @@
              "plan_tratamiento_detalle_view.xml",              
              "consulta_factura_view.xml",
              "sincronizacion_view.xml",
+             "sequence_data.xml"
              ],    
     'installable': True,
     'active': False

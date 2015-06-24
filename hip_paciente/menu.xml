@@ -9,13 +9,13 @@
 				<field name="view_type">form</field>  
 				<field name="view_mode">tree,form</field>
 				<field name="view_id" ref="base.view_partner_tree" /> 
-				<field name="context">{}</field>
+				<field name="domain">[('customer','=',True)]</field>
 				<field name="target">current</field>
 					
 		</record>
 
 		<menuitem id="menu_paciente"
-					sequence="1"
+					sequence="5"
 					parent="hip_clinica.menu_clinica_consulta"
 					action="action_paciente"
 		/>  

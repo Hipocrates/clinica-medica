@@ -12,22 +12,46 @@
 	            	<field name="fecha"/>
 	            	<field name="precio"/>
 	            	<field name="paciente_id"/>	
-	            	<field name="status"/>
+	            	<field name="state"/>
 	            </tree>
             </field>
         </record> 
     
+    	<record id="view_plan_tratamiento_filter" model="ir.ui.view">
+            <field name="name">view.plan.tratamiento.filter</field>
+            <field name="model">plan.tratamiento.detalle</field>
+            <field name="arch" type="xml">
+                <search string="Buscar...">
+               		<group expand="0" string="Agrupar por...">               			
+               			<filter string="Paciente" domain="[]" context="{'group_by':'paciente_id'}"/>
+               		</group>
+                </search>
+            </field>
+       	</record>  
+       	
 		<record id="plan_tratamiento_detalle_view_form" model="ir.ui.view">
             <field name="name">plan.tratamiento.detalle.view.form</field>
             <field name="model">plan.tratamiento.detalle</field>
             <field name="arch" type="xml">
 	            <form string="Plan tratamiento detalle">
-	            	<field name="id_cat_tratamiento"/>
-	            	<field name="orden"/>
-	            	<field name="fecha"/>
-	            	<field name="precio"/>
-	            	<field name="paciente_id"/>	
-	            	<field name="status"/>
+	            	<header>
+	            		<button name="signal_done" string="Finalizar" type="object" class="oe_highlight" />
+            			<field name="state" widget="statusbar" states="draft"/>
+            		</header>
+            		<sheet>
+            			<group>
+            				<group>
+            					<field name="id_cat_tratamiento"/>
+				            	<field name="orden"/>
+				            	<field name="fecha"/>
+            				</group>
+            				<group>
+	            				<field name="precio"/>
+				            	<field name="paciente_id"/>	
+				            	<field name="state"/>
+            				</group>
+		            	</group>
+	            	</sheet>
 	            </form>
             </field>
         </record>

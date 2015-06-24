@@ -5,8 +5,16 @@ class hip_consulta(osv.osv):
     
     _name = "hip.consulta"
     
+    def signal_done(self, cr, uid, ids, context=None):        
+        self.write(cr, uid, ids, {"state" : "done"})        
+        return True
+    
+    def create(self, cr, uid, vals, context=None):
+        vals['name'] = self.pool.get('ir.sequence').get(cr, uid, 'hip.consulta') or '/'
+        return super(hip_consulta, self).create(cr, uid, vals, context=context)
+    
     _columns = {
-        "name" : fields.char("Folio"),
+        "name" : fields.char("Folio", readonly=True, store=True),
         "partner_id" : fields.many2one("res.partner", "Paciente"),
         "fecha" : fields.date("Fecha"),
         "maestro_id" : fields.many2one("maestro", "Maestro"),

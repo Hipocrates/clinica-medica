@@ -2,6 +2,7 @@
 {
     'name' : 'Clinica',
     'version' : '1.1',
+    'sequence' : '1',
     'author' : 'OpenERP SA',
     'category' : 'Administracion',
     'description' : """

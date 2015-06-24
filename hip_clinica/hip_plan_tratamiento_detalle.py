@@ -15,9 +15,13 @@ class plan_tratamiento_detalle(osv.osv):
         "diagnostico_id" : fields.many2one("diagnostico", "Diagnostico"),
 #         "factura_id" : fields.many2one("account.invoice", "Factura"),
         "paciente_id" : fields.many2one("res.partner", "Paciente"),  
-        "status" : fields.selection([("draft", "Nuevo"), 
-                                           ("done", "Revisado")], "Status"),          
+        "state" : fields.selection([("draft", "Nuevo"), 
+                                    ("done", "Revisado")], "Status"),          
     }
+    
+    def signal_done(self, cr, uid, ids, context=None):        
+        self.write(cr, uid, ids, {"status" : "done"})        
+        return True
     
     _defaults = {
         "status" : "draft"

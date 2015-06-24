@@ -63,11 +63,11 @@
             <field name="act_window_id" ref="io_action_consulta"/>
         </record>
         
-		<menuitem id="io_menu_consulta"
+		<!-- <menuitem id="io_menu_consulta"
 					parent="menu_clinica_consulta"	
 					sequence="1"
 					action="io_action_consulta"	
-					/>   
+					/>    -->
 		
 		
     </data>
