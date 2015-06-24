@@ -11,7 +11,7 @@
         		</article>
         </div> 
         <div class="row">
-        	<section id="sec_lateral" style="font-size:1.3em">
+        	<section id="sec_lateral" style="font-size:1.2em">
         		<article>
 
 					<center>
@@ -39,7 +39,9 @@
 					
 					<p align="justify">Por ello, manifiesto que estoy satisfecho con la información recibida y que comprendo el alcance y los riesgos del tratamiento y en teles condiciones.</p>
 					
-					CONSIENTO, FIRMA Y NOMBRE.
+					<article id="paciente" class="mt32 mb32">
+        				<div><b class="name_persona" t-field="o.partner_id.name"/></div>     
+        			</article>
 					______________________________________________________</h2>
 					</center>
 				</article>

@@ -9,14 +9,8 @@
     'summary': 'Modulo Clinica',
     'description': "Este modulo es para administracion de la clinica",
     'depends': ["sale"],
-    'data': [             
-             "report_invoice.xml",
-             "invoice_report.xml",
-             "report_extraccion.xml",
-             "extraccion_report.xml",
-             "evolucion_report.xml",
-             "report_evolucion.xml",
-             
+    'data': [
+             "res_company_view.xml",
              ],    
     'installable': True,
     'active': False

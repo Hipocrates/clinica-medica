@@ -11,23 +11,26 @@
         		</article>
         </div> 
         <div class="row">
-        	<section id="sec_lateral" style="font-size:1.3em">
+        	<section id="sec_lateral" style="font-size:1.2em">
         		<article>
-
 					<center>
 					<h1><p>CONSENTIMIENTO PARA EXTRACCIÓN DENTAL</p></h1>
-					
 					<h2><p align="justify">Estoy conciente que los tratamientos a realizarse son hechos por estudiantes de la Licenciatura en Odontologia de la "Universidad Hipocrates" y supervisados por el instructor clinico a cargo, por lo cual corroboro que los datos antes mencionados son veridicos y seran utilizados solo como historial medico-Odontologico.</p>
 					
 					<p align="justify">Conforme a NOM 168-SSA 1-1998 del expediente clinico en sus numerales 5.14, 6.1 al 7.2 y NOM 013-SSA2-1994 para la prevencion y control de enfermedades bucales en sus numerales 8.3, 8.3.2, 8.3.3, 8.3.4, 8.3.5</p>
-					______________________________________________________
-					Nombre y firma del paciente (Padre o Tutor)
-					Sobre la veracidad de los datos aportados.
 					
+					<article id="paciente" class="mt32 mb32">
+        				<div><b class="name_persona" t-field="o.partner_id.name"/></div>     
+        			</article>
+					<p>Nombre y firma del paciente (Padre o Tutor)
+					Sobre la veracidad de los datos aportados.</p>
+					<br></br>
 					______________________________________________________
+					<br></br>
 					Nombre y firma del alumno tratante
-					
+					<br></br>
 					_____________________________________________________
+					<br></br>
 					Nombre y firma del C.D Instructor Clinica</h2>
 					</center>
 				</article>
