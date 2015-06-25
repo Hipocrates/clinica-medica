@@ -20,10 +20,24 @@ class plan_tratamiento_detalle(osv.osv):
     }
     
     def signal_done(self, cr, uid, ids, context=None):        
-        self.write(cr, uid, ids, {"status" : "done"})        
+        self.write(cr, uid, ids, {"state" : "done"})        
         return True
     
+    def create(self, cr, uid, vals, context=None):
+        
+        if vals.has_key("diagnostico_id"):
+            d_id = vals["diagnostico_id"]
+            diagnostico = self.pool.get("diagnostico").browse(cr, uid, d_id)
+            
+            if diagnostico.paciente_id:
+                p_id = diagnostico.paciente_id.id
+                vals["paciente_id"] = p_id 
+        
+        return super(plan_tratamiento_detalle, self).create(cr, uid, vals, context)        
+#             if diagnostico.fecha:                
+#                 vals["fecha"] = diagnostico.fecha
+    
     _defaults = {
-        "status" : "draft"
+        "state" : "draft"
     }
 plan_tratamiento_detalle()
