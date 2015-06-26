@@ -17,6 +17,7 @@
             "cat_diagnostico_view.xml", 
             "cat_tratamiento_view.xml",  
             "diagnostico_view.xml", 
+            "security/ir.model.access.csv"
 
              "plan_tratamiento_detalle_view.xml",              
              "consulta_factura_view.xml",

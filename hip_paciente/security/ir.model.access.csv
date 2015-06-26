@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_invoice_import,invoice.import,model_invoice_import,account.group_account_invoice,1,1,1,1
+access_invoice_import_line,invoice.import.line,model_invoice_import_line,account.group_account_invoice,1,1,1,1
+access_invoice_import_tax,invoice.import.tax,model_invoice_import_tax,account.group_account_invoice,1,1,1,1

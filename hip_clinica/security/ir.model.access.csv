@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cat_diagnostico,cat.diagnostico,model_cat_diagnostico,,1,1,1,1
+access_cat_tratamiento,cat.tratamiento,model_cat_tratamiento,,1,1,1,1
+access_diagnostico,diagnostico,model_diagnostico,,1,1,1,1
+access_alumnos,alumnos,model_alumnos,,1,1,1,1
+access_hip_consulta,hip.consulta,model_hip_consulta,,1,1,1,1
+access_maestro,maestro,model_maestro,,1,1,1,1
+access_plan_tratamiento_detalle,plan.tratamiento.detalle,model_plan_tratamiento_detalle,,1,1,1,1
+access_sincronizacion,sincronizacion,model_sincronizacion,,1,1,1,1

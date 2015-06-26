@@ -8,5 +8,6 @@ encoding//hip_clinica/hip_consulta.py=utf-8
 encoding//hip_clinica/hip_maestro.py=utf-8
 encoding//hip_clinica/hip_plan_tratamiento_detalle.py=utf-8
 encoding//hip_clinica/sincronizacion.py=utf-8
+encoding//hip_config/res_company.py=utf-8
 encoding//hip_paciente/__openerp__.py=utf-8
 encoding//hip_report/__openerp__.py=utf-8
