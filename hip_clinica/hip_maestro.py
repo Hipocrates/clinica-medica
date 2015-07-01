@@ -6,7 +6,7 @@ class maestro(osv.osv):
     _name = "maestro"
     _columns = {
         "id_maestro" : fields.integer("id maestro"),
-        "nombre" : fields.char("Nombre"),
+        "name" : fields.char("Nombre"),
         "cedula" : fields.char("Cedula"),
     }
 maestro()

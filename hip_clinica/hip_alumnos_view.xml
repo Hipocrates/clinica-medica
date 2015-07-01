@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
 	            <tree string="Alumnos">
 	            	<field name="matricula"/>
-	            	<field name="nombre"/>
+	            	<field name="name"/>
 	            	<field name="grupo"/>
 	            	<field name="ciclo"/>
 	            </tree>
@@ -34,10 +34,17 @@
             <field name="model">alumnos</field>
             <field name="arch" type="xml">
 	            <form string="Alumnos">
-	            	<field name="matricula"/>
-	            	<field name="nombre"/>
-	            	<field name="grupo"/>
-	            	<field name="ciclo"/>
+	            	<group>
+	            		<group>
+	            			<field name="matricula"/>
+			            	<field name="name"/>			            	
+	            		</group>
+	            		<group>
+	            			<field name="grupo"/>
+			            	<field name="ciclo"/>
+	            		</group>
+	            	
+	            	</group>
 	            </form>
             </field>
         </record>  

@@ -8,7 +8,7 @@ class alumnos(osv.osv):
         #"id_receta" : fields.integer("id receta"),
         #"id_consulta" : fields.integer("id consulta"),
         "matricula" : fields.char("Matricula"),
-        "nombre" : fields.char("Nombre"),
+        "name" : fields.char("Nombre"),
         "grupo" : fields.char("Grupo"),
         "ciclo" : fields.char("Ciclo"),
         #"id_carrera" : fields.char("id carrera"),

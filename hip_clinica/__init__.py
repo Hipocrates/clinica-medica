@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# import res_users
 import cat_tratamiento
 import cat_diagnostico
 import diagnostico

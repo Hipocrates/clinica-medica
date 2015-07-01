@@ -11,9 +11,11 @@
 				
 		<menuitem id="menu_clinica_config"
 			name="Configuracion"
+			groups="group_clinica_admin"
 			parent="menu_clinica"/>
 			
 		<menuitem id="menu_sincro"
+		groups="group_clinica_admin"
 		name="Sincronizacion"
 		parent="menu_clinica"/>
 			

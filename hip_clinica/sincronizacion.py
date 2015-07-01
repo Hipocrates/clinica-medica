@@ -2,13 +2,15 @@
 from openerp.osv import osv, fields
 import time
 import fdb
+import sys, os
 
 class sincronizacion(osv.osv):
     
     _name = "sincronizacion"
-    def sincronizador(self, cr, uid, ids, context=None):   
+    def sincronizador(self, cr, uid, ids, context=None):
         
-        con = fdb.connect(dsn='C:\Osvaldo\BDSISCUH.GDB', user='SYSDBA', password='masterkey')
+        path = os.path.abspath('/DB') + "\BDSISCUH.GDB"
+        con = fdb.connect(dsn=path, user='SYSDBA', password='masterkey')
         cur = con.cursor()
         cur.execute("SELECT DISTINCT ALUMNOS.NOCONTROL, ALUMNOS.NOMBRE, SALONES.GRUPO, SALONES.PERIODO FROM ALUMNOS, MATERIAS, SALONES, CALIF WHERE ALUMNOS.NOCONTROL = CALIF.NOCONTROL AND MATERIAS.CLAVEMAT= SALONES.IDMATERIA AND CALIF.IDGPIF = SALONES.IDGPIF  AND SALONES.PERIODO='2014-2015' AND SALONES.GRUPO LIKE '%ODM%' ORDER BY ALUMNOS.NOMBRE")
         rows = cur.fetchall()
@@ -21,7 +23,6 @@ class sincronizacion(osv.osv):
         alumno_obj = self.pool.get("alumnos")
         
         for row in rows:
-            
             
             vals = {
                 "matricula" : row[0].strip(),
@@ -89,8 +90,7 @@ class sincronizacion(osv.osv):
                 
                 alumno_id = alumno_obj.create(cr, uid, vals, context)
                 
-        for row in rows4:
-                
+        for row in rows4:                
                 
             vals = {
                 "matricula" : row[0].strip(),
@@ -116,7 +116,8 @@ class sincronizacion(osv.osv):
 
     def sincromaestro(self, cr, uid, ids, context=None):   
         
-        con = fdb.connect(dsn='C:\Osvaldo\BDSISCUH.GDB', user='SYSDBA', password='masterkey')
+        path = os.path.abspath('/DB') + "\BDSISCUH.GDB"
+        con = fdb.connect(dsn=path, user='SYSDBA', password='masterkey')
         cur = con.cursor()
         cur.execute("select NOMBRE, CHECADOR  from PROFESORES WHERE CHECADOR is not null")
         rows = cur.fetchall()

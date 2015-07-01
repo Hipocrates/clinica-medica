@@ -25,7 +25,7 @@
             <field name="arch" type="xml">
 	            <form string="Catalogo de diagnostico">
 	            	<header>
-	            		<button name="signal_done" string="Finalizar" type="object" class="oe_highlight" />
+	            		<button name="signal_done" states="draft" string="Finalizar" type="object" class="oe_highlight" />
 	            		<field name="state" widget="statusbar" states="draft"/>
 	            	</header>
 	            	<sheet>

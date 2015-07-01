@@ -10,20 +10,20 @@
     'description': "Este modulo es para administracion de la clinica",
     'depends': ["sale"],
     'data': [
-             "menu.xml",
-             "hip_alumnos_view.xml",
-             "hip_maestro_view.xml", 
-             "hip_consulta_view.xml",
+            "security/invoice_import_security.xml",
+            "security/ir.model.access.csv",
+            "menu.xml",
+            "hip_alumnos_view.xml",
+            "hip_maestro_view.xml", 
+            "hip_consulta_view.xml",
             "cat_diagnostico_view.xml", 
             "cat_tratamiento_view.xml",  
-            "diagnostico_view.xml", 
-            "security/ir.model.access.csv"
-
-             "plan_tratamiento_detalle_view.xml",              
-             "consulta_factura_view.xml",
-             "sincronizacion_view.xml",
-             "sequence_data.xml"
-             ],    
+            "diagnostico_view.xml",
+            "plan_tratamiento_detalle_view.xml",              
+            "consulta_factura_view.xml",
+            "sincronizacion_view.xml",
+            "sequence_data.xml"
+    ],    
     'installable': True,
     'active': False
 }

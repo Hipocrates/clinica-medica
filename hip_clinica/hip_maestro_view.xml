@@ -7,7 +7,7 @@
             <field name="model">maestro</field>
             <field name="arch" type="xml">
 	            <tree string="Maestro">
-	            	<field name="nombre"/>
+	            	<field name="name"/>
 	            	<field name="cedula"/>
 	            	<field name="id_maestro"/>
 	            </tree>
@@ -19,7 +19,7 @@
             <field name="model">maestro</field>
             <field name="arch" type="xml">
 	            <form string="Maestro">
-	            	<field name="nombre"/>
+	            	<field name="name"/>
 	            	<field name="cedula"/>
 	            </form>
             </field>
