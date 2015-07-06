@@ -32,7 +32,9 @@
             			</h1>
             			<group>
             				<group>            					
-            					<field name="partner_id" required="1" domain="[('customer', '=', True)]"/>
+            					<field name="partner_id" on_change="onchange_partner(partner_id)" required="1" domain="[('customer', '=', True)]"/>
+            					<field name="genero" />
+            					<field name="edad" />            					
             					<field name="company_id" invisible="1"/>
             				</group>
             				<group>

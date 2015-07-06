@@ -18,8 +18,24 @@ class hip_consulta(osv.osv):
         user = obj.browse(cr, 1, [uid])
         return user.company_id.id
     
+    def onchange_partner(self, cr, uid, ids, partner_id, context=None):
+        r = {"value" : {}}
+        
+        partner = self.pool.get("res.partner")
+        
+        if partner.edad:
+            r["value"].update({"edad" : partner.edad})
+        
+        if partner.genero:
+            r["value"].update({"genero" : partner.genero})
+        
+        return r
+    
     _columns = {
         "name" : fields.char("Folio", readonly=True, store=True),
+        "edad" : fields.integer("Edad"),
+        "genero" : fields.selection([("masculino", "Masculino"), 
+                                     ("femenino", "Femenino")], "Genero"),
         "partner_id" : fields.many2one("res.partner", "Paciente"),
         "fecha" : fields.date("Fecha"),
         "maestro_id" : fields.many2one("maestro", "Maestro"),
