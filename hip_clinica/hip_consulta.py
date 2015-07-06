@@ -21,7 +21,8 @@ class hip_consulta(osv.osv):
     def onchange_partner(self, cr, uid, ids, partner_id, context=None):
         r = {"value" : {}}
         
-        partner = self.pool.get("res.partner")
+        partner_obj = self.pool.get("res.partner")
+        partner = partner_obj.browse(cr, uid, partner_id, context)
         
         if partner.edad:
             r["value"].update({"edad" : partner.edad})

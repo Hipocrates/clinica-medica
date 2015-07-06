@@ -9,7 +9,7 @@ class sincronizacion(osv.osv):
     _name = "sincronizacion"
     def sincronizador(self, cr, uid, ids, context=None):
         
-        path = os.path.abspath('/DB') + "\BDSISCUH.GDB"
+        path = "127.0.0.1:/tmp/DB/BDSISCUH.GDB"
         con = fdb.connect(dsn=path, user='SYSDBA', password='masterkey')
         cur = con.cursor()
         cur.execute("SELECT DISTINCT ALUMNOS.NOCONTROL, ALUMNOS.NOMBRE, SALONES.GRUPO, SALONES.PERIODO FROM ALUMNOS, MATERIAS, SALONES, CALIF WHERE ALUMNOS.NOCONTROL = CALIF.NOCONTROL AND MATERIAS.CLAVEMAT= SALONES.IDMATERIA AND CALIF.IDGPIF = SALONES.IDGPIF  AND SALONES.PERIODO='2014-2015' AND SALONES.GRUPO LIKE '%ODM%' ORDER BY ALUMNOS.NOMBRE")
@@ -116,7 +116,7 @@ class sincronizacion(osv.osv):
 
     def sincromaestro(self, cr, uid, ids, context=None):   
         
-        path = os.path.abspath('/DB') + "\BDSISCUH.GDB"
+        path = "127.0.0.1:/tmp/DB/BDSISCUH.GDB"
         con = fdb.connect(dsn=path, user='SYSDBA', password='masterkey')
         cur = con.cursor()
         cur.execute("select NOMBRE, CHECADOR  from PROFESORES WHERE CHECADOR is not null")
